@@ -14,4 +14,8 @@ public class KafkaProducer {
 		kafkaTemplate.send("CodeDecodeTopic", message);
 	}
 
+	public void sendMessageToDMSTopic(String message) {
+		kafkaTemplate.send("no-03-osl.spo.dms.out.json", message);
+	}
+
 }

@@ -10,4 +10,10 @@ public class KafkaListner {
 	public void listenToCodeDecodeKafkaTopic(String messageReceived) {
 		System.out.println("Message received is " + messageReceived);
 	}
+
+	@KafkaListener(topics = "no-03-osl.spo.dms.out.json", groupId = "dms-group")
+	public void listenToDMSTopic(String messageReceived) {
+		System.out.println("Message received from DMS topic: " + messageReceived);
+	}
+
 }
